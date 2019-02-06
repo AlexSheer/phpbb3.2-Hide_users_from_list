@@ -1,0 +1,9 @@
+services:
+    sheer.hdeusr.listener:
+        class: sheer\hdeusr\event\listener
+        arguments:
+            - '@dbal.conn'
+            - '@config'
+            - '@auth'
+        tags:
+            - { name: event.listener }
